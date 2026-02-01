@@ -51,7 +51,7 @@ Welcome! This guide explains how to use the Construction Costing System web app.
 ## How to plug in real launch URLs (TODO)
 - Replace the Product Hunt link in `landing.html` with your Product Hunt product URL.
 - Replace social & share links with your actual pages or sharing endpoints.
-- Update `og:url` and `og:image` in `index.html` and `landing.html` with your production URL and share image.
+- Update `og:url` and `og:image` in `index.html` and `landing.html` with your production URL and share image. (If hosted on GitHub Pages, use `https://AlGedawy.github.io/Construction-Costing-System/`.)
 
 ---
 

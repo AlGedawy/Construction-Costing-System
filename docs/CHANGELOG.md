@@ -23,4 +23,4 @@ Feedback & Contribution
 How to plug in real launch URLs
 - Product Hunt: replace `https://www.producthunt.com/posts/your-product-slug` in `landing.html` with your Product Hunt URL.
 - Indie Hackers / Social: replace placeholder links with your community pages.
-- Update `og:url` and `og:image` tags in `index.html` and `landing.html` with your real site URL and share image.
+- Update `og:url` and `og:image` tags in `index.html` and `landing.html` with your real site URL and share image. (For GitHub Pages hosting, use `https://AlGedawy.github.io/Construction-Costing-System/` as the site URL.)
