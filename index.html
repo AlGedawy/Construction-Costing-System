@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOQ SaaS – Construction Cost Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="main.js"></script>
+    <script defer src="view_dashboard.js"></script>
+    <script defer src="view_boq.js"></script>
+    <script defer src="view_calc.js"></script>
+    <script defer src="charts.js"></script>
+    <script defer src="data.js"></script>
+    <script defer src="state.js"></script>
+</head>
+<body>
+    <header>
+        <h1>BOQ SaaS – Construction Cost Manager</h1>
+        <div class="lang-switcher">
+            <label for="language">🌐 Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+            </select>
+        </div>
+    </header>
+
+    <nav>
+        <button onclick="viewDashboard()">Dashboard</button>
+        <button onclick="viewBOQ()">BOQ Table</button>
+        <button onclick="viewCalc()">Calculations</button>
+    </nav>
+
+    <main id="main-content">
+        <!-- Dynamic content will be injected here -->
+    </main>
+
+    <footer>
+        <p>© 2026 BOQ SaaS | Built for smart construction cost control.</p>
+    </footer>
+</body>
+</html>
