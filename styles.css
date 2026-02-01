@@ -1,33 +1,110 @@
+:root{
+    --bg:#f7f8fb;
+    --card:#ffffff;
+    --muted:#6b7280;
+    --accent:#2563eb;
+    --danger:#dc2626;
+    --border: #e6e7ee;
+    --radius:8px;
+    --shadow: 0 6px 18px rgba(22, 30, 86, 0.06);
+    --mono: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+}
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f8f8;
-    color: #333;
+/* Reset & layout */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--mono);background:var(--bg);color:#0f172a}
+.container{max-width:1100px;margin:24px auto;padding:0 18px}
+
+/* Header */
+.site-header{background:linear-gradient(90deg,#fff,#f8fbff);border-bottom:1px solid var(--border)}
+.header-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.site-header h1{font-size:1.05rem;margin:0}
+
+/* Nav */
+.site-nav{margin-top:12px}
+.nav-row{display:flex;gap:8px;padding:8px 0}
+
+/* Design system - Buttons */
+.btn{appearance:none;border:1px solid var(--border);background:var(--card);color:#0f172a;padding:8px 12px;border-radius:6px;cursor:pointer;font-weight:600;box-shadow:none}
+.btn:hover{box-shadow:var(--shadow)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:white}
+.btn-danger{background:transparent;border-color:var(--danger);color:var(--danger)}
+.btn-ghost{background:transparent;border:1px dashed var(--border);color:var(--muted)}
+
+/* Inputs */
+.input{padding:8px 10px;border:1px solid var(--border);border-radius:6px;background:white}
+.input.small{padding:6px 8px;font-size:0.9rem}
+
+/* Card */
+.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:18px}
+
+/* Toolbar */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+/* Table */
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th, .table td{padding:8px;border-bottom:1px solid var(--border);text-align:left}
+.table th{background:#fbfdff;color:var(--muted);font-weight:700}
+.table tfoot td{font-weight:700;background:transparent}
+.table .num{text-align:right;min-width:110px}
+
+/* BOQ layout */
+.project-toolbar{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.project-selector{display:flex;gap:8px;align-items:center}
+.section{margin-bottom:14px}
+.section-header{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:8px}
+.section-title{font-weight:700;font-size:0.98rem}
+.section-actions{display:flex;gap:8px}
+
+/* Small helpers */
+.muted{color:var(--muted)}
+.right{text-align:right}
+.center{text-align:center}
+.small{font-size:0.9rem;color:var(--muted)}
+
+.inline{display:inline-flex;gap:6px;align-items:center}
+.margin-left-auto{margin-left:auto}
+
+/* Responsive */
+@media (max-width:640px){
+    .table th, .table td{padding:6px;font-size:0.95rem}
+    .toolbar{flex-direction:column;align-items:flex-start}
 }
-header, nav, footer {
-    background: #004080;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+
+/* RTL adjustments */
+html[dir="rtl"]{direction:rtl}
+html[dir="rtl"] .header-row{flex-direction:row-reverse}
+html[dir="rtl"] .inline{direction:rtl}
+html[dir="rtl"] .section-header{justify-content:space-between}
+html[dir="rtl"] .table th, html[dir="rtl"] .table td{text-align:right}
+html[dir="rtl"] .input{direction:rtl;text-align:right}
+
+/* Plan badge */
+.plan-badge{margin-left:12px;padding:6px 8px;border-radius:6px;background:#fff;border:1px solid var(--border);font-weight:700}
+.plan-badge.plan-pro{background:linear-gradient(90deg,#eefbf3,#e6fff1);border-color:#a6f3bf;color:#064e3b}
+
+/* Plans modal */
+.plan-modal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(3,7,18,0.45);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:all .18s}
+.plan-modal.open{opacity:1;pointer-events:auto}
+.plan-modal .plan-modal-card{width:720px;max-width:95%;padding:18px;position:relative}
+.plans-grid{display:flex;gap:12px}
+.plan-card{flex:1}
+.plan-modal-close{position:absolute;right:12px;top:8px}
+@media (max-width:640px){ .plans-grid{flex-direction:column} }
+
+/* Landing / Hero styles */
+.hero{padding:24px 18px;border-radius:10px;display:block}
+.hero h2{margin:0 0 8px;font-size:1.3rem}
+.hero p.small{margin:0 0 12px}
+.hero ul{margin:8px 0 12px;padding-left:18px}
+.hero-cta{display:flex;gap:10px;align-items:center;margin-top:12px}
+.social-links{display:flex;gap:12px;flex-wrap:wrap}
+.social-links a{color:var(--accent);text-decoration:none;font-weight:700}
+.hero .btn{padding:10px 14px}
+
+@media (max-width:640px){
+  .hero{padding:18px}
+  .hero-cta{flex-direction:column;align-items:flex-start}
 }
-nav button {
-    margin: 0.2rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    background: #0066cc;
-    color: white;
-    cursor: pointer;
-}
-nav button:hover {
-    background: #0052a3;
-}
-main {
-    padding: 1rem;
-}
-.lang-switcher {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
+
+

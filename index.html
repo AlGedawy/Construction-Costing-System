@@ -5,39 +5,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOQ SaaS – Construction Cost Manager</title>
+    <meta name="description" content="BOQ SaaS — a lightweight, bilingual web app for Construction BOQ, automated costing, and professional exports. Replace manual Excel workflows with fast, professional reports." />
+    <meta property="og:title" content="BOQ SaaS – Construction Cost Manager" />
+    <meta property="og:description" content="Replace manual Excel with automated BOQ calculations, bilingual UI, PDF/Excel exports, and quick project estimates." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="https://example.com/og-image.png" />
+    <link rel="canonical" href="https://example.com/" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- i18n locales & core -->
+    <script defer src="i18n/en.js"></script>
+    <script defer src="i18n/ar.js"></script>
+    <script defer src="i18n/i18n.js"></script>
+
+    <!-- Plans / Monetization -->
+    <script defer src="config/plan.js"></script>
+    <script defer src="plan.js"></script>
+
     <script defer src="main.js"></script>
+
+    <!-- CDN: jsPDF (PDF export) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <!-- CDN: SheetJS (XLSX/CSV import & export) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <script defer src="boq.js"></script>
+
+    <!-- Analytics & monitoring (Phase 6) -->
+    <!-- Plausible: replace `example.com` with your domain (e.g., yoursite.com) when ready -->
+    <script defer data-domain="example.com" src="https://plausible.io/js/plausible.js"></script>
+
+    <!-- Microsoft Clarity: replace PROJECT_ID with your real Clarity project id when ready -->
+    <script>
+    // Clarity tracking (placeholder): Replace "CLARITY_PROJECT_ID" with your real ID
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/CLARITY_PROJECT_ID";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script");
+    </script>
+
+    <script defer src="analytics.js"></script>
     <script defer src="view_dashboard.js"></script>
     <script defer src="view_boq.js"></script>
     <script defer src="view_calc.js"></script>
-    <script defer src="charts.js"></script>
-    <script defer src="data.js"></script>
-    <script defer src="state.js"></script>
+    <script defer src="view_diagnostics.js"></script>
 </head>
 <body>
-    <header>
-        <h1>BOQ SaaS – Construction Cost Manager</h1>
-        <div class="lang-switcher">
-            <label for="language">🌐 Language:</label>
-            <select id="language">
-                <option value="en">English</option>
-                <option value="ar">العربية</option>
-            </select>
+    <header class="site-header">
+        <div class="container header-row">
+            <h1 data-i18n="header.title"></h1>
+            <div class="controls">
+                <label for="language" data-i18n="label.language"></label>
+                <select id="language" aria-label="Language switcher">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+                <span id="plan-status" class="plan-badge small">Free plan</span>
+                <button class="btn" id="btn-plans">Plans & Pricing</button>
+            </div>
         </div>
     </header>
 
-    <nav>
-        <button onclick="viewDashboard()">Dashboard</button>
-        <button onclick="viewBOQ()">BOQ Table</button>
-        <button onclick="viewCalc()">Calculations</button>
+    <nav class="site-nav">
+        <div class="container nav-row">
+            <button class="btn nav-btn" onclick="viewDashboard()" data-i18n="nav.dashboard"></button>
+            <button class="btn nav-btn" onclick="viewBOQ()" data-i18n="nav.boq"></button>
+            <button class="btn nav-btn" onclick="viewCalc()" data-i18n="nav.calc"></button>
+            <button class="btn nav-btn" onclick="viewDiagnostics()" data-i18n="nav.diagnostics">Diagnostics</button>
+        </div>
     </nav>
 
-    <main id="main-content">
-        <!-- Dynamic content will be injected here -->
+    <main id="main-content" class="container">
+        <!-- Dashboard is rendered by default on load -->
     </main>
 
-    <footer>
-        <p>© 2026 BOQ SaaS | Built for smart construction cost control.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p data-i18n="footer.copyright"></p>
+            <p class="small"> <a href="landing.html">About / Launch</a> · <a href="docs/CHANGELOG.md">Changelog</a> · <a href="https://github.com/AlGedawy/Construction-Costing-System/issues" target="_blank" rel="noopener">Feedback</a></p>
+        </div>
     </footer>
 </body>
 </html>

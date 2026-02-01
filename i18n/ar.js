@@ -1,0 +1,80 @@
+(function(){
+    window.I18N_LOCALES = window.I18N_LOCALES || {};
+    window.I18N_LOCALES.ar = {
+        "header.title": "نظام حساب تكلفة المشاريع (BOQ)",
+        "label.language": "اللغة",
+        "nav.dashboard": "الصفحة الرئيسية",
+        "nav.boq": "جدول الكميات",
+        "nav.calc": "الحسابات",
+        "dashboard.welcome": "مرحباً بك في لوحة تحكم BOQ SaaS.",
+        "calc.description": "يتم حساب المجاميع تلقائياً بناءً على بيانات الإدخال.",
+
+        "project.new": "جديد",
+        "project.save": "حفظ",
+        "project.load": "تحميل",
+        "project.delete": "حذف",
+        "project.saved": "تم حفظ المشروع",
+        "project.deleted": "تم حذف المشروع",
+        "project.chooseSaved": "اختر مشروعاً محفوظاً أولاً",
+        "project.savedProjectsPlaceholder": "-- المشاريع المحفوظة --",
+
+        "add.section": "+ إضافة قسم",
+        "tax.label": "الضريبة",
+        "add.row": "+ سطر",
+        "section.subtotal": "مجموع القسم",
+        "section.delete": "حذف القسم",
+
+        "row.copy": "نسخ",
+        "row.delete": "حذف",
+
+        "table.description": "وصف البند",
+        "table.quantity": "الكمية",
+        "table.unit": "الوحدة",
+        "table.rate": "السعر",
+        "table.total": "الإجمالي",
+        "table.actions": "الإجراءات",
+
+        "totals.subtotal": "المجموع الفرعي",
+        "totals.tax": "الضريبة",
+        "totals.grand": "الإجمالي الكلي",
+
+        "export.pdf": "تصدير PDF",
+        "export.xlsx": "تصدير XLSX",
+        "export.csv": "تصدير CSV",
+        "import.label": "استيراد",
+        "import.complete": "اكتمل الاستيراد",
+        "import.failed": "فشل الاستيراد",
+
+        "toast.saved": "تم حفظ المشروع",
+        "toast.deleted": "تم حذف المشروع",
+        "confirm.deleteProject": "حذف المشروع المحدد؟",
+        "boq.notLoaded": "لم يتم تحميل محرك BOQ.",
+
+        "plans.title": "الخطط و الأسعار",
+        "plans.free.name": "مجاني",
+        "plans.pro.name": "برو",
+        "plans.free.desc": "حتى 3 مشاريع؛ حتى 50 بنداً لكل مشروع.",
+        "plans.pro.desc": "مشاريع وبنود غير محدودة. دعم مميز.",
+        "plans.upgrade": "التحديث إلى برو",
+        "plans.simulateUpgrade": "محاكاة التحديث",
+        "plans.useFree": "استخدام النسخة المجانية",
+        "paywall.projectsReached": "تم الوصول إلى حد المشاريع — الرجاء الترقية.",
+        "paywall.itemsReached": "تم الوصول إلى حد البنود — الرجاء الترقية.",
+        "plans.current": "الخطة الحالية",
+        "nav.diagnostics": "التشخيص",
+        "diag.title": "التحليلات و التشخيص",
+        "diag.plausible": "Plausible",
+        "diag.clarity": "Microsoft Clarity",
+        "diag.checking": "جارٍ الفحص...",
+        "diag.triggerError": "تفعيل خطأ تجريبي",
+        "diag.appVersion": "نسخة التطبيق",
+        "diag.environment": "البيئة",
+        "diag.userAgent": "مستخدم:",
+
+        "pdf.title": "الجدول",
+        "import.chooseFile": "اختر ملف...",
+        "import.invalidFile": "ملف غير صالح",
+        "export.done": "تم التحميل",
+        "footer.copyright": "© 2026 نظام BOQ | إدارة تكاليف المشاريع"
+    };
+})();

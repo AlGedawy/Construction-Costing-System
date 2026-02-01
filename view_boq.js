@@ -1,11 +1,10 @@
 
 function viewBOQ() {
-    document.getElementById('main-content').innerHTML = `
-        <h2>BOQ Table</h2>
-        <table border="1" width="100%">
-            <tr><th>Item</th><th>Quantity</th><th>Unit</th><th>Rate</th><th>Total</th></tr>
-            <tr><td>Excavation</td><td>100</td><td>m³</td><td>50</td><td>5000</td></tr>
-            <tr><td>Concrete</td><td>80</td><td>m³</td><td>120</td><td>9600</td></tr>
-        </table>
-    `;
+    // BOQ module exposes a render() function
+    if (window.BOQ && typeof BOQ.render === 'function') {
+        BOQ.render();
+    } else {
+        const msg = (window.I18N && typeof I18N.t === 'function') ? I18N.t('boq.notLoaded') : 'BOQ engine not loaded.';
+        document.getElementById('main-content').innerHTML = `<div class="card"><p class="small muted">${msg}</p></div>`;
+    }
 }
