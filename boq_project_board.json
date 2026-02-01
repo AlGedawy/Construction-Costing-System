@@ -1,0 +1,52 @@
+{
+  "name": "BOQ SaaS Product Roadmap",
+  "description": "Project board for the BOQ SaaS product roadmap.",
+  "columns": [
+    { "name": "Backlog" },
+    { "name": "To Do" },
+    { "name": "In Progress" },
+    { "name": "Testing" },
+    { "name": "Done" },
+    { "name": "Blocked / Needs Review" }
+  ],
+  "cards": [
+    { "note": "Add internationalization (i18n) framework", "column": "Backlog" },
+    { "note": "Create Arabic language resource files", "column": "Backlog" },
+    { "note": "Generate Terms of Service template", "column": "Backlog" },
+    { "note": "Create Privacy Policy template", "column": "Backlog" },
+    { "note": "Write marketing copy for landing page", "column": "Backlog" },
+    { "note": "Define subscription pricing tiers", "column": "Backlog" },
+    { "note": "Design project templates", "column": "Backlog" },
+    { "note": "Add dark/light theme toggle", "column": "Backlog" },
+
+    { "note": "Create GitHub repo & branch strategy", "column": "To Do" },
+    { "note": "Deploy base staging site", "column": "To Do" },
+    { "note": "Create UI wireframes for BOQ table", "column": "To Do" },
+    { "note": "Implement reactive cost calculations", "column": "To Do" },
+    { "note": "Setup localStorage project saving", "column": "To Do" },
+    { "note": "Integrate jsPDF for PDF export", "column": "To Do" },
+    { "note": "Integrate SheetJS for Excel export", "column": "To Do" },
+
+    { "note": "Build multilingual toggle UI", "column": "In Progress" },
+    { "note": "Setup onboarding modal", "column": "In Progress" },
+    { "note": "Create landing page copy", "column": "In Progress" },
+    { "note": "Implement subscription gating logic", "column": "In Progress" },
+    { "note": "Add analytics tracking", "column": "In Progress" },
+    { "note": "Instrument error logging", "column": "In Progress" },
+
+    { "note": "Unit test cost calculation logic", "column": "Testing" },
+    { "note": "Cross-browser compatibility tests", "column": "Testing" },
+    { "note": "Responsive layout tests", "column": "Testing" },
+    { "note": "User acceptance testing (UX flows)", "column": "Testing" },
+    { "note": "Export validation (PDF / Excel)", "column": "Testing" },
+
+    { "note": "Create project skeleton", "column": "Done" },
+    { "note": "Deploy to Netlify / Vercel", "column": "Done" },
+    { "note": "Setup basic BOQ table", "column": "Done" },
+    { "note": "Configure auto-deploy on push", "column": "Done" },
+
+    { "note": "Billing system integration pending pricing finalization", "column": "Blocked / Needs Review" },
+    { "note": "Legal docs review", "column": "Blocked / Needs Review" },
+    { "note": "Graphic design assets pending approval", "column": "Blocked / Needs Review" }
+  ]
+}
