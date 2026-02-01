@@ -5,7 +5,11 @@ Built to replace Excel chaos with automation, simplicity, and multilingual suppo
 
 ---
 
-## 🚀 Features
+## � Live Demo
+
+- Site: https://algedawy.github.io/Construction-Costing-System/ (GitHub Pages)
+
+## �🚀 Features
 
 - 🔢 **BOQ Cost Engine** – Calculate item totals, subtotals, taxes, and grand totals in real-time.
 - 🧾 **Export Tools** – Download reports in PDF, Excel, and CSV formats.
